@@ -35,7 +35,16 @@
 
 
 def one(input1, input2):
-    return ""
+    if len(input1) > len(input2):
+        return input1
+    elif len(input1) < len(input2):
+        return input2
+    else:
+        return input1 + ' ' + input2
+    
+print(one('hi','hello'))
+print(one('three','two'))
+print(one('three','hello'))
 
    # <QUESTION 2>
 
@@ -61,6 +70,7 @@ def one(input1, input2):
 
 
 def two(input):
+
     return ""
 
 
@@ -85,7 +95,21 @@ def two(input):
 
 
 def three(arg1):
-    return ""
+   
+    if arg1 %3 == 0 and arg1 % 5 == 0:
+        return 'fizzbuzz'
+    elif arg1 % 5 == 0:
+        return 'buzz'
+    elif arg1 % 3 == 0:
+        return 'fizz'
+    else:
+        return 'null'
+
+print(three(3))
+print(three(10))
+print(three(15))
+print(three(8))
+
 
     # <QUESTION 4>
 
@@ -111,6 +135,7 @@ def three(arg1):
 
 
 def four(arg1):
+
     return ""
 
     # <QUESTION 5>
@@ -161,7 +186,21 @@ def five(input):
 
 
 def six(input):
-    return ""
+    if 'cie' in input:
+        return False
+    elif 'ie'  in input:
+        return True
+    elif 'cei' in input:
+        return True
+    else:
+        return False
+    
+print(six('ceiling'))
+print(six('believe'))
+print(six('glacier'))
+print(six('height'))
+print(six('receive'))
+   
 
     # <QUESTION 7>
 
@@ -179,7 +218,14 @@ def six(input):
 
 
 def seven(input):
-    return ""
+    count = 0
+    for char in input:
+        if char in 'aeiouAEIOU':
+            count = count + 1
+    return count
+    
+print(seven('HELLO'))
+print(seven('hEelLoooO'))
 
     # <QUESTION 8>
 
@@ -198,7 +244,15 @@ def seven(input):
 
 
 def eight(input):
-    return ""
+    i = 1
+    while input > 0:
+        i = i * input
+        input = input - 1
+    return i
+
+print(eight(1))
+print(eight(4))
+print(eight(8))
 
     # <QUESTION 9>
 
@@ -220,7 +274,23 @@ def eight(input):
 
 
 def nine(inputString, char):
-    return ""
+    pos= []
+    for i in range(len(inputString)):
+        if inputString[i] == char:
+           pos = inputString[i]
+           return i
+        elif inputString[i] != char:
+            return -1
+        elif inputString[i] == ' ':
+            pass
+        else:
+            return 
+       
+
+print(nine("This is a Sentence","s"))
+print(nine("Fridge for sale","z"))
+            
+  
 
     # <QUESTION 10>
 
